@@ -1,0 +1,98 @@
+.main-content {
+	width:  350px;
+  border-radius: 18px;
+  background-color: black;
+  margin: auto;
+}
+
+.main-content-calculator {
+	padding-left: 8px;
+  width:  322px;
+  padding-bottom: 8px;
+}
+
+.main-content-resultScreen{	
+	overflow: hidden;	  
+  align-self: center;
+  border-radius: 18px;  
+}
+
+.calculator-line{
+  padding-top: 3px;
+}
+
+.Total {
+  font-family: sans-serif;
+  visibility: hidden;
+}
+
+.number{	
+  background-color: rgb(192,192,192);
+  border: none;
+  color: white;  
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;  
+  font-size: 25px;  
+  border-radius: 50%;
+  width: 24%;
+  height: 80px;
+}
+
+.numberDouble{	
+  background-color: rgb(192,192,192);
+  border: none;
+  color: white;  
+  font-family: sans-serif;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;   
+  font-size: 25px;
+  padding-left: 32px;
+  border-radius: 18px;
+  width: 49%;
+  height: 80px;
+}
+
+.operator{	
+  background-color: rgb(255,170,0);
+  border: none;
+  color: white;  
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;  
+  font-size: 25px;  
+  border-radius: 50%;
+  width: 24%;
+  height: 80px;
+}
+
+.resultTotal {
+	padding-right: 10px;	
+	overflow: hidden;
+}
+
+.resultTotalMini {
+	padding-right: 15px;	
+	overflow: hidden;
+}
+
+.resultScreen {	
+	font-family: sans-serif;
+	color: white;		
+	height: 60px;
+	font-size: 48px;	
+	text-align: right;	
+	overflow: hidden;
+}
+
+.resultScreenMini {	
+	font-family: sans-serif;
+	color: white;	
+	text-align: right;	
+	height: 15px;	
+	font-size: 12px;	
+	padding-top: 5px;		
+	overflow: hidden;
+}
+

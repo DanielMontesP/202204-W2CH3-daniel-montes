@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>Calculator</title>
+<head>
+	<link rel="stylesheet" href="./calculatorStyle.css">	
+	<script src="./calculatorTools.js"></script>	
+</head>
+
+<body>
+<div id="content" align="center">
+<table>	
+  <tr>   
+    	<td  colspan="4">
+      		<div id="divResult" class="resultScreenMini"><img src="images\lupa.png" align="left" title="Full operation detail."><span id="resultTotalMini"></span></div><div class="resultScreen"><span id="resultTotal">0</span></div>      		
+  		</td>      
+  </tr>
+  <tr>
+    <td class="numDouble" colspan="2"><button id="ac" class="numberDouble" onclick="javascript:userPush(this.id);">AC</button></td>
+    <td class="numSingle"><button id="c" class="number" onclick="javascript:userPush(this.id);">C</button></td>
+    <td class="operators"><button id="/" class="operator" onclick="javascript:userPush(this.id);">/</button></td>
+  </tr>
+  <tr>
+    <td class="numSingle"><button id="7" class="number" onclick="javascript:userPush(this.id);">7</button></td>
+    <td class="numSingle"><button id="8" class="number" onclick="javascript:userPush(this.id);">8</button></td>
+    <td class="numSingle"><button id="9" class="number" onclick="javascript:userPush(this.id);">9</button></td>
+    <td class="operators"><button id="x" class="operator" onclick="javascript:userPush(this.id);">x</button></td>
+  </tr>
+  <tr>
+    <td class="numSingle"><button id="4" class="number" onclick="javascript:userPush(this.id);">4</button></td>
+    <td class="numSingle"><button id="5" class="number" onclick="javascript:userPush(this.id);">5</button></td>
+    <td class="numSingle"><button id="6" class="number" onclick="javascript:userPush(this.id);">6</button></td>
+    <td class="operators"><button id="-" class="operator" onclick="javascript:userPush(this.id);">-</button></td>
+  </tr>
+  <tr>
+    <td class="numSingle"><button id="1" class="number" onclick="javascript:userPush(this.id);">1</button></td>
+    <td class="numSingle"><button id="2" class="number" onclick="javascript:userPush(this.id);">2</button></td>
+    <td class="numSingle"><button id="3" class="number" onclick="javascript:userPush(this.id);">3</button></td>
+    <td class="operators"><button id="+" class="operator" onclick="javascript:userPush(this.id);">+</button></td>
+  </tr>
+  <tr>
+    <td class="numDouble" colspan="2"><button id="0" class="numberDouble" onclick="javascript:userPush(this.id);">0</button></td>
+    <td class="numSingle"><button id="," class="number" onclick="javascript:userPush(this.id);">,</button></td>
+    <td class="operators"><button id="=" class="operator" onclick="javascript:userPush(this.id);">=</button></td>
+  </tr>
+</table>
+</div>
+
+</body>
+
+</html>
