@@ -1,0 +1,20 @@
+{
+  "name": "202204-w2ch3-daniel-montes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielMontesP/202204-W2CH3-daniel-montes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielMontesP/202204-W2CH3-daniel-montes/issues"
+  },
+  "homepage": "https://github.com/DanielMontesP/202204-W2CH3-daniel-montes#readme"
+}
