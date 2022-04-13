@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Pasapalabra</title>
+<head>
+	<link rel="stylesheet" href="./index.css">    	
+	<script src="./index.js"></script>
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+  	
+</head>
+<body>
+    <div id="welcome" >
+        <div id="welcome-content" class="welcome-content">            
+            <span id="welcome-title" class="welcome-title">INSTRUCCIONES</span>
+            <div id="welcome-obs-container" class="welcome-obs-container">
+                <span id ="welcome-obs" class="welcome-obs">Este juego consiste en responder una pregunta por cada letra del abecedario.</p><p>Tiempo para responder 180 segundos.</p><p>Quedarán marcadas las respuestas correctas en verde y las erróneas en rojo.</p><p>Puede pasar a la siguiente pregunta pulsando el botón de pasapalabra.</p></span>                
+                <button class="button-Empezar" id="empezar" onclick="javascript:sendInput();"><span class="span-btempezar">JUGAR</span></button>
+                <button class="button-Jugar" id="jugar" onclick="javascript:askForUserName();"><span class="span-btempezar">JUGAR</span></button>
+                <button class="button-Salir" id="btSalir" onclick="javascript:salir();"><span id="salir" class="span-btempezar">SALIR</span></button>
+                <button class="button-Volver" id="btvolver" onclick="javascript:volver();"><span id="volver"class="span-btempezar">VOLVER</span></button>
+            </div> 
+            <div>
+                <input type="checkbox" id ="input_ModoAdmin" class="modoAdmin" name="input_ModoAdmin" checked>              
+                <label for="input_ModoAdmin" id ="label_ModoAdmin" class="modoAdmin"> ADMIN. (Ver respuestas)</label>           
+                <input type="checkbox" id ="input_ModoAuto" class="modoAuto" name="input_ModoAuto" checked>              
+                <label for="input_ModoAuto" id ="label_ModoAuto" class="modoAuto"><span class="span-Auto"> AUTO (Sin pausas entre preguntas)</span></label>  
+                <input type="checkbox" id ="input_ModoSound" class="modoSound" name="input_ModoSound" checked>              
+                <label for="input_ModoSound" id ="label_ModoSound" class="modoSound"><span class="span-Sound"> Activar sonidos</span></label> 
+            </div>
+        </div>
+    </div>                
+       
+	<div id="main" class="main-content">
+		<div id="letterA-container" class="letterA-container">
+		    <span class="letter" id="letterA">A</span>
+        </div>         
+        <div id="letterB-container" class="letterB-container">
+            <span class="letter" id="letterB">B</span>
+        </div>
+        <div id="letterC-container" class="letterC-container">
+            <span class="letter" id="letterC">C</span>
+        </div>
+        <div id="letterD-container" class="letterD-container">
+            <span class="letter" id="letterD">D</span>
+        </div>
+        <div id="letterE-container" class="letterE-container">
+            <span  class="letter" id="letterE">E</span>
+        </div>
+        <div id="letterF-container" class="letterF-container">
+            <span  class="letter" id="letterF">F</span>
+        </div>
+        <div id="letterG-container" class="letterG-container">
+            <span  class="letter" id="letterG">G</span>
+        </div>
+        <div id="letterH-container" class="letterH-container">
+            <span  class="letter" id="letterH">H</span>
+        </div>
+        <div id="letterI-container" class="letterI-container">
+            <span  class="letter" id="letterI">I</span>
+        </div>
+        <div id="letterJ-container" class="letterJ-container">
+            <span  class="letter" id="letterJ">J</span>
+        </div>
+        <div id="letterK-container" class="letterK-container">
+            <span  class="letter" id="letterK">K</span>
+        </div>
+        <div id="letterL-container" class="letterL-container">
+            <span  class="letter" id="letterL">L</span>
+        </div>
+        <div id="letterM-container" class="letterM-container">
+            <span  class="letter" id="letterM">M</span>
+        </div>
+        <div id="letterN-container" class="letterN-container">
+            <span  class="letter" id="letterN">N</span>
+        </div>
+        <div id="letterÑ-container" class="letterÑ-container">
+            <span  class="letter" id="letterÑ">Ñ</span>
+        </div>
+        <div id="letterO-container" class="letterO-container">
+            <span  class="letter" id="letterO">O</span>
+        </div>
+        <div id="letterP-container" class="letterP-container">
+            <span  class="letter" id="letterP">P</span>
+        </div>
+        <div id="letterQ-container" class="letterQ-container">
+            <span  class="letter" id="letterQ">Q</span>
+        </div>
+        <div id="letterR-container" class="letterR-container">
+            <span  class="letter" id="letterR">R</span>
+        </div>
+        <div id="letterS-container" class="letterS-container">
+            <span  class="letter" id="letterS">S</span>
+        </div>
+        <div id="letterT-container" class="letterT-container">
+            <span  class="letter" id="letterT">T</span>
+        </div>
+        <div id="letterU-container" class="letterU-container">
+            <span  class="letter" id="letterU">U</span>
+        </div>
+        <div id="letterV-container" class="letterV-container">
+            <span  class="letter" id="letterV">V</span>
+        </div>        
+        <div id="letterX-container" class="letterX-container">
+            <span  class="letter" id="letterX">X</span>
+        </div>
+        <div id="letterY-container" class="letterY-container">
+            <span  class="letter" id="letterY">Y</span>
+        </div>
+        <div id="letterZ-container" class="letterZ-container">
+            <span  class="letter" id="letterZ">Z</span>
+        </div> 
+        <div id="prompt" class="prompt-content">
+            <span id="prompt-title" class="prompt-title"></span>
+            <p><span id="prompt-obs"></span></p>
+            <input type="text" id="input" class="prompt-input" value="Respuesta">        
+            <button class="button-Return" id="return" onclick="javascript:sendInput();"><span class="return">></span></button>            
+            <div id="pasapalabra-container" >
+                <button  id="pasapalabra" class="button-Pasapalabra" onclick="javascript:pressPasapalabra();"><span class="pasapalabra">PASAPALABRA</span></button>              
+            </div>
+            <div id="ranking" class="ranking-content">
+                <span id="ranking-obs" class="ranking-obs"></span>
+             </div>
+             <div id="userScore" class="userScore-content">
+                <span id="userScore-obs" class="userScore-obs"></span>
+             </div>
+             <div id="user" class="username-content">
+                <span id="username" class="username">Player1</span>
+            </div>
+        </div>
+        <div id="score-content" class="score-content">           
+            <div id="score" class="scoreTooltip">
+                <span class="tt-scoreTooltip">Aciertos</span>
+            </div>
+                <span id="textScore" class="score">0</span>                
+        </div>
+        <div id="timer" class="timer-content">
+                <span id="textTimer" class="timer">180</span>            
+        </div>
+        <div id="iconSound" class="iconSound-container">
+                <button onclick="changeSoundStatus();" class="bt-ChangeVolStatus"><span id="iconSoundDisabled" class="iconSoundDisabled">X</span><img src="images/sound.png"> </button>           
+        </div>
+    </div>    
+	 
+	<div id="cerrar" class="cerrar-content">
+        <button class="button-Cerrar" id="cerrar" onclick="javascript:cerrar();"><span class="cerrar">X</span></button>
+    </div>
+    <span id="isNewGame" class="isNewGame">1</span>  
+    <audio id="soundCorrect" src="sounds/win.mp3" type="audio/mpeg"></audio>
+    <audio id="soundError" src="sounds/loose.mp3" type="audio/mpeg"></audio>
+    <audio id="soundCabecera" loop="loop" autoplay="autoplay" src="sounds/cabecera.mp3" type="audio/mpeg" loop></audio> 
+</body>
+</html>
